@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>QUIZ APP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+         <!--- Bootstrap CSS --->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <!--- Custom CSS --->
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div class="header">
+            <h1>QUIZ APP</h1>
+            <p>HOW SMART ARE YOU?</p>
+        </div>
+        
+        <div class="banner">
+            <img src="images/clouds.jpg"/>
+        </div>
+        
+        <div class="content">
+            <div class="left">
+                <h2>TEST YOUR KNOWLEDGE</h2>
+                <p>Type in your answer below!</p>
+                
+                <p>1. What was Mandela's nickname?</p>
+                <input type="text" id="q1"/>
+                <p id="q1-result"></p>
+                
+                <p>2. In wich continent is Bulgaria?</p>
+                <input type="text" id="q2"/>
+                <p id="q2-result"></p>
+                
+                <p>3. What is an Orca a type of?</p>
+                <input type="text" id="q3"/>
+                <p id="q3-result"></p>
+                
+                <p>4. The closest star to the Earth is the?</p>
+                <input type="text" id="q4"/>
+                <p id="q4-result"></p>
+                <br>
+                <button id="submit">Submit</button>
+                <br><br><br>
+            </div>
+            <div class="right">
+                <h2>POPULAR LINKS</h2>
+                <a href="http://www.itvarsity.org">IT Varsity</a><br>
+                <a href="http://www.compukids.org">Compukids</a><br>
+                <a href="http://www.nationalgeographic.com">National Geographic</a><br>
+                <a href="http://travelchannel.com">Travel Channel</a><br>
+                <a href="http://virgin-atlantic.com/us/en.html">Virgin Atlantic</a><br>
+                <a href="http://tripadvisor.com">Trip Advisor</a><br>
+                <a href="http://wikipedia.org/wiki/Main_Page">Wikipedia</a><br>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Educational project designened through It varsity | DESIGNED BY CHRIS</p>
+        </div>
+        <!-- Scripts -->
+        <!-- Bootstrap core JavaScript -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+        <script src="assets/js/isotope.min.js"></script>
+        <script src="assets/js/owl-carousel.js"></script>
+        <script src="assets/js/lightbox.js"></script>
+        <script src="assets/js/custom.js"></script>
+        <!-- Custom JavaScript -->
+        <script>
+            document.getElementById("submit").addEventListener('click', checkAnswers);
+            function checkAnswers(){
+                var answer1 = document.getElementById("q1").value;
+                var answer2 = document.getElementById("q2").value;
+                var answer3 = document.getElementById("q3").value;
+                var answer4 = document.getElementById("q4").value;
+                
+                if(answer1 == "Madiba"){
+                    document.getElementById("q1-result").innerHTML = "Correct";
+                }else{
+                    document.getElementById("q1-result").innerHTML = "Incorrect answer";    
+                }
+                
+                if(answer2 == "Europe"){
+                    document.getElementById("q2-result").innerHTML = "Correct;"
+                }else{
+                    document.getElementById("q2-result").innerHTML = "Incorrect answer";
+                }
+                
+                if(answer3 == "Dolphin"){
+                    document.getElementById("q3-result").innerHTML = "Correct;"
+                }else{
+                    document.getElementById("q3-result").innerHTML = "Incorrect answer";
+                }
+                
+                 if(answer4 == "Sun"){
+                    document.getElementById("q4-result").innerHTML = "Correct;"
+                }else{
+                    document.getElementById("q4-result").innerHTML = "Incorrect answer";
+                }
+            }
+             
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
